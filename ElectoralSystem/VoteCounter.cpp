@@ -6,7 +6,9 @@
 #include "stdafx.h"
 #include "VoteCounter.h"
 
-
+/**
+ * fill the tree the extracted data
+ */
 VoteCounter::VoteCounter()
 {
 	this->extract(FILE_PATH);
@@ -18,6 +20,10 @@ VoteCounter::~VoteCounter()
 {
 }
 
+/**
+ * extract the candidates and the ballots from file_path
+ * add those data in ballots and order vectors
+ */
 void VoteCounter::extract(string file_path)
 {
 	string line;
@@ -70,6 +76,10 @@ void VoteCounter::extract(string file_path)
 	else cout << "Unable to open file";
 }
 
+/**
+ * get the winner of the election from the tree
+ * @return the candidate who wins
+ */
 Candidate * VoteCounter::getWinner()
 {
 	cout << "Number of voters : " << this->ballots.size() << "\n";
