@@ -11,6 +11,13 @@ Candidate::Candidate()
 {
 }
 
+/**
+ * initialize the candidate from nameAndParty
+ * 
+ * @param string nameAndParty : represents the candidate
+ * nameAndParty contains the name and the party of the candidate
+ * they are (must be) separated by this character : ","
+ */
 Candidate::Candidate(string nameAndParty)
 {
 	int pos = nameAndParty.find(",");
