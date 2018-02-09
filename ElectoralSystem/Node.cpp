@@ -72,7 +72,9 @@ void Node::increment()
 }
 
 /**
- * 
+ * sum 2 branches of a tree
+ * 1 starting from the current node
+ * 1 starting from the node called added
  * @param Node * added : node to sum
  * for each follower in followers of added
  *		get the pos of the follower in this.followers 
@@ -174,6 +176,11 @@ void Node::print()
 	cout << this->nodeString(0);
 }
 
+/**
+ * create a string for the current node and its followers
+ * @param int rank : rank of the current node in the tree
+ * @return : the string representing the branche from this node in the tree
+ */
 string Node::nodeString(int rank)
 {
 	string str = "";
