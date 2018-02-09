@@ -11,11 +11,20 @@ BallotPaper::~BallotPaper()
 {
 }
 
+/**
+ * set the candidate at the n-th place of the ballot's array
+ * @param int n : preference for c
+ * @param Candidate * c : the candidate to add in the ballot
+ */
 void BallotPaper::setPreference(int n, Candidate* c)
 {
 	this->order[n] = c;
 }
 
+/**
+ * get the candidate who has the n-th preference
+ * @param int n : preference of the wanted candidate
+ */
 Candidate* BallotPaper::getPreference(int n)
 {
 	return this->order[n];
