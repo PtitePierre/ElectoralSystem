@@ -49,6 +49,7 @@ void VoteCounter::extract(string file_path)
 		nom = line;
 		Candidate* c = new Candidate(nom);
 		order.push_back(c);
+		// ^ improve with a do/while(?) ^
 
 		// get ballots
 		while (getline(myfile, line))
